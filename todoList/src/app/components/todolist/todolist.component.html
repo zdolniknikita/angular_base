@@ -1,0 +1,22 @@
+<div>
+    <h2>Todo list</h2>
+    <div>
+        <input type="text">
+        <button>Добавить</button>
+    </div>
+    <div>
+        <ul>
+            <li *ngFor='let item of todos'> 
+                <span [ngClass]="item.completed ? 'completed' : ''"> 
+                    {{ item.title }} 
+                </span>
+                <input 
+                    type="checkbox" 
+                    [checked]="item.completed" 
+                    (change)='onChangeHadler(item.id)'
+                >
+            </li>
+
+        </ul>
+    </div>
+</div>
