@@ -1,0 +1,8 @@
+<p>toto list</p>
+<ul>
+    <app-todo-item 
+        *ngFor='let item of todos' 
+        [todo]='item'
+        (deleteItem)='onDeleteHandler(item)'
+    ></app-todo-item>
+</ul>

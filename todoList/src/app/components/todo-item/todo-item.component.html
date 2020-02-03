@@ -1,0 +1,5 @@
+<li>
+      <span [ngClass]="todo.completed ? 'completed' : ''"> {{ todo.title }} </span>
+      <input type="checkbox" [(ngModel)] = 'todo.completed'>
+      <button (click)='onDelete(todo.id)'>X</button>
+</li>
